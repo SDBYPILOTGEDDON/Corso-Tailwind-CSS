@@ -1,0 +1,19 @@
+{
+  "name": "Course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i src/styles.css -o public/output.css -w"
+  }
+
+  /* -w is for --watch so whenever i edit my src style.css file, 
+  it will rebuild the public output.css file */
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^2.2.4"
+  }
+}
