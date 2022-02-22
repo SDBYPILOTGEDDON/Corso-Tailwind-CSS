@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i src/styles.css -o public/output.css -w"
+    "build": "tailwindcss -i src/styles.css -o public/output.css -w" /* -w o --watch serve perchè ogni volta che io modifico lo style.css file, fa il rebuild del output.css file */
   }
-
-  /* -w is for --watch so whenever i edit my src style.css file, 
-  it will rebuild the public output.css file */
-
   "keywords": [],
   "author": "",
   "license": "ISC",
