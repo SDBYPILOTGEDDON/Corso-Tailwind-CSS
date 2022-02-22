@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="output.css">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div class="lg:conteiner xl:mx-auto bg-green-400">
+
+        <!-- Creo una tabella specificando le colonne (Es. 3 colonne) -->
+
+                <div class="grid grid-cols-3 gap-3"> <!-- Questo crea la riga -->
+
+                    <!-- Queste sono le colonne -->
+
+                    <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
+                        Grid Col 1
+                    </div>
+
+                    <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
+                        Grid Col 2
+                    </div>
+
+                    <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
+                        Grid Col 3
+                    </div>
+                </div>
+
+                <br><br><br>
+
+                <!-- Rispetto alle flexbox ho più controllo sulle Grid, posso specificare quante colonne
+                     In base al tipo di display (Grande, Piccolo, Medio) grazie ai breakpoint: -->
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3"> <!-- Questo crea la riga -->
+
+                    <!-- Queste sono le colonne -->
+                    
+                    <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
+                        Grid Col 1
+                    </div>
+
+                    <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
+                        Grid Col 2
+                    </div>
+
+                    <div class="font-sans bg-yellow-300 w-full h-40 text-center text-xl">
+                        Grid Col 3
+                    </div>
+
+                    <!-- Tramite col-start e end posso specificare quali colonne comprendere in un elemento -->
+                    <div class="grid grid-cols-6 gap-4">
+                        <div class="col-start-2 col-span-4 bg-blue-800 w-full h-20 text-center text-x1">1</div>
+                        <div class="col-start-1 col-end-3 bg-blue-800 w-full h-20 text-center text-x1">2</div>
+                        <div class="col-end-7 col-span-2 bg-blue-800 w-full h-20 text-center text-x1">3</div>
+                        <div class="col-start-1 col-end-7 bg-blue-800 w-full h-20 text-center text-x1">4</div>
+                      </div>
+
+                    <!--Oppure usare col-span-n per rendere l'elemento lungo n colonne -->
+                
+                    <!-- N.B: Al posto di grid-cols posso usare grid-rows per le righe-->
+
+                </div>
+    </div>    
+</body>
+</html>

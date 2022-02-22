@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tailwindcss Course</title>
+
+    <link rel="stylesheet" href="output.css"> <!-- Linko nella pagina HTML l'output.css con dentro TailWind -->
+
+</head>
+<body>
+    
+    <!-- Creo un cointeiner: 
+         - Con bg- *colore* scelgo il olor
+         - Con mx-auto centro il container nella pagina
+         - Con h-32 specifico la altezza del conteiner
+     -->
+
+    <div class="lg:container xl:mx-auto bg-indigo-600  h-32">
+
+    <!-- I pezzi di codice come lg: *Qualcosa* sono chiamati breakpoints.
+         Attivano la proprietà se la grandezza dell'elemento' supera la soglia.
+         Ne ho usate due in questo esempio:
+         
+         lg:conteiner = Se la dimensione del conteiner è uguale o maggiore di lg (1000px)
+                        limita la grandezza di questa <div> ai parametri scelti
+         
+        xl:mx-auto = Se il viewpoint della pagina supera la soglia xl (1200px) allora
+                     Centra il conteiner.
+    -->
+
+        <h2 class="text-2xl text-gray-200 text-center"> <!-- Semplice testo con dimensione, colore e giustificazione -->
+
+            Container
+
+            <!-- Con le classi font e text modifico il tipo di font, la grandezza del testo, la giustificazione -->
+
+            <p class="font-mono text-red-900 text-lg text-left">
+
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni tempore adipisci deleniti nobis,
+                voluptate excepturi cum quibusdam possimus esse accusamus repudiandae nam ea officiis molestias,
+                odio mollitia cumque! Officiis, blanditiis!
+            </p>
+        </h2>
+    </div>
+</body>
+</html>

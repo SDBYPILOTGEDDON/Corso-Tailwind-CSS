@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="output.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Per creare una Flexbox innanzitutto creo un container -->
+
+    <div class="lg:conteiner min- sm:mx-auto bg-indigo-400">
+
+        <div class="flex gap-8 flex-col md:flex-row">
+
+         <!-- Dopodichè creo un elemento della classe flex con attributi:
+         - flex per dirie che è una flexbox
+         - gap è lo spazio tra gli elementi della flexbox
+         - flex-col mettere gli elementi in colonna invece che in riga
+         - md:flex-row è il breakpoint per far andare gli elementi riga quando si supera una soglia 
+
+           Ora inserisco gli elementi della flex box chiamati flex-initial:
+           Con un font, un colore di sfondo (bg-), text centrato, text color e grandezza testo -->
+
+            <div class="flex-auto font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+                Flex 1
+            </div>
+
+            <div class="flex-1 font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+                Flex 2
+            </div>
+
+            <div class="flex-initial font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+                Flex 3
+            </div>
+
+            <!-- Con flex-initial permetto agli elementi di ridursi ma non di crescere tenendo conto delle dimensioni iniziali,
+                 Con flex-1 permetto agli elementi di crescere e ridursi per coprire tutta la pagina a piacimento
+                 Con flex-auto permetto agli elementi di cresscere e mantenere la dimensione minima.
+                 Con flex-none evito che gli elementi siano rimpiccioliti o ingranditi  -->
+
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br>
+
+        <!-- N.B: Al posto di flex-col md:flex-row potrei semplicemente scrivere flex-wrap, una classe che
+        mette gli elementi in colonna appena la finestra tocca l'ultimo elemento della flexbox.
+        Con flex-nowrap non faccio scalare gli elementi -->
+
+        <div class="flex gap-8 flex-wrap md:flex-row">
+
+            <div class="flex-auto font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+                Flex 1
+            </div>
+
+            <div class="flex-initial font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+                Flex 2
+            </div>
+
+            <div class="flex-initial font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+                Flex 3
+            </div>  
+
+            <!-- Con grow permetto all'elemento di ingrandirsi senza rimpicciolirsi -->
+            <div class="flex-grow font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+                Flex 4 
+            </div>  
+
+            <!-- Con shrink permetto all'elemento di rimpicciolirsi senza ingrandirsi-->
+            <div class="flex-shrink font-sans bg-green-400 w-40 h-40 text-center text-gray-200 text-xl">
+                Flex 5
+            </div>  
+            
+            <!-- N.B: grow-0 e shrink-0 non fanno ingrandire e rimpicciolire rispettivamente -->
+            
+        </div>
+
+        </div>    
+    </div>
+</body>
+</html>
